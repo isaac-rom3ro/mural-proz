@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mural Proz</title>
+    <link rel="stylesheet" href="../style/reset.css"> <!--limpa estilo css padrão dos navegadores -->
+    <link rel="stylesheet" href="../style/header.css">
 </head>
 <body>
-    <header>
-        <nav>
+
+    <header class="header__content">
+        <div class="header__top">  
             <div class="header__logo">
-                <div class="header__img">
-                    <img src="" alt="">
+                    <img class="header__img" src="imgs/placeholderLogo.png" alt="">
+            </div>
+
+            <div class="header__user">
+                <div class="a-button login">
+                   <a class="" href=""> login </a>
+                </div>
+
+                 <div class="a-button subscribe">
+                    <a href=""> Cadrastre-se</a>
                 </div>
             </div>
+        </div>
+                
+        <nav class="header__nav"> 
 
-            <div class="header__sections">
-                <ul class="header__list-sections">
+            <div class="nav__content">
+                <ul class="nav__list-sections">
                     <li>Todos</li>
                     <li>Vagas</li>
-                    <li>Posts</li>
                     <li>Avisos</li>
+                    <li>Posts</li>
                 </ul> 
-            </div>
-
-            <div>
-                <div>login</div>
-                <div>Cadrastre-se</div>
+                
             </div>
         </nav>
     </header> 
