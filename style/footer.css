@@ -1,0 +1,10 @@
+.footer__content{
+    position: fixed;
+    background-color: #000;
+    width: 100vw;
+    height: 5vh;
+}
+
+.credits-github{
+    color: #fff;
+}

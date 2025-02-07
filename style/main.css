@@ -1,0 +1,18 @@
+.main__board{
+    background-color: #201629;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.post{
+    background-color: rgb(216, 197, 113);
+    height: 25vh;
+    width: 25%;
+    margin: 50px 10px;
+} 

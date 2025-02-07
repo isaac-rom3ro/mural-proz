@@ -79,6 +79,7 @@ body{
     flex-wrap: nowrap;
     align-self: flex-end;
     color: #fff;
+    box-shadow: rgb(22, 2, 46) 0px 20px 30px -10px;
 }
 
 .nav__content{
