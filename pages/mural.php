@@ -27,11 +27,11 @@
 
             <div class="header__user">
                 <div class="a-button login">
-                   <a class="" href=""> login </a>
+                   <a class="" href="../index.php"> login </a>
                 </div>
 
                  <div class="a-button subscribe">
-                    <a href=""> Cadrastre-se</a>
+                    <a href="./register-page.php"> Cadrastre-se</a>
                 </div>
             </div>
         </div>
