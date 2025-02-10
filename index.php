@@ -7,16 +7,20 @@
 </head>
 <body>
     <?php
-        if($_GET["sign"] == "empty-inputs") {
-            echo "Fill the inputs!";
-        } else if($_GET["sign"] == "empty-user") {
-            echo "empty username!";
-        } else if($_GET["sign"] == "empty-email") {
-            echo "empty email!";
-        } else if($_GET["sign"] == "empty-password") {
-            echo "empty password!";
+        //Im handling the possible errors that come after the user submitted the form
+        try {
+            if($_GET["sign"] == "empty-inputs") {
+                echo "Fill the inputs!";
+            } else if($_GET["sign"] == "empty-user") {
+                echo "empty username!";
+            } else if($_GET["sign"] == "empty-email") {
+                echo "empty email!";
+            } else if($_GET["sign"] == "empty-password") {
+                echo "empty password!";
+            }
+        } catch(Exception $e) {
+            echo $e->getMessage();
         }
-
     ?>
 
     <form action="./assets/includes/login-admin.php" method="POST">
