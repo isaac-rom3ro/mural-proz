@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <script src="./assets/script/select-typeof-user.js" defer></script>
 </head>
 <body>
-    <form action="">
-        <select name="user-type" id="user-type">
-            <option value="admin">Administrador</option>
-            <option value="aluno">Aluno</option>
-        </select>
+    <form action="./assets/includes/login-admin.php" method="POST">
+        <input type="text" name="user" placeholder="Username">
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+
+        <button type="submit">Login</button>
     </form>
 </body>
 </html>
