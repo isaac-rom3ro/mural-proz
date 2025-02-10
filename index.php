@@ -6,6 +6,19 @@
     <title>Login Page</title>
 </head>
 <body>
+    <?php
+        if($_GET["sign"] == "empty-inputs") {
+            echo "Fill the inputs!";
+        } else if($_GET["sign"] == "empty-user") {
+            echo "empty username!";
+        } else if($_GET["sign"] == "empty-email") {
+            echo "empty email!";
+        } else if($_GET["sign"] == "empty-password") {
+            echo "empty password!";
+        }
+
+    ?>
+
     <form action="./assets/includes/login-admin.php" method="POST">
         <input type="text" name="user" placeholder="Username">
         <input type="text" name="email" placeholder="Email">
