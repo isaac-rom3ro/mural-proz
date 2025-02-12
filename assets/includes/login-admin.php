@@ -28,10 +28,15 @@
                 
                 $result = $stmt->rowCount(); //Get the number of rows returned
 
-                if($result) { //if it returns 1 
-                    echo "user registered";
+                if($result) { 
+                    $user = $stmt->fetch(PDO::FETCH_ASSOC); //Get the user's information 
+                    
+                    session_start(); //start a session
+                    $_SESSION["user-id"] = $user["user_id"]; //Get the id from the database and put it inside a session variable called user-id   
+
+                    header("Location: ../../pages/mural.php"); //redirect to the main page
                 } else { // if it returns 0
-                    echo "user unregistered";
+                    header("Location: ../../index.php?sign=user-not-found");
                 }
             }
         } catch(Exception $e) {

@@ -17,6 +17,8 @@
                 echo "empty email!";
             } else if($_GET["sign"] == "empty-password") {
                 echo "empty password!";
+            } else if($_GET["sign"] == "user-not-found") {
+                echo "user not found!";
             }
         } catch(Exception $e) {
             echo $e->getMessage();
