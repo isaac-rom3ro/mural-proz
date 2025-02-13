@@ -18,7 +18,7 @@
             } else if(empty($password)) {
                 header("Location: ../../index.php?sign=empty-password");
             } else { //if user filled correctly 
-                include '../database/db-connection.php'; //include the connection
+                include_once '../database/db-connection.php'; //include the connection
 
                 //prepare and did the query with bindParam
                 $stmt = $db->prepare("SELECT * FROM admin WHERE email = :email AND pass = :pass");
