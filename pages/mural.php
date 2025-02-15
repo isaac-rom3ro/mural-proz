@@ -37,15 +37,13 @@
         </div>
                 
         <nav class="header__nav"> 
-
             <div class="nav__content">
-                <ul class="nav__list-sections">
-                    <li>Todos</li>
-                    <li>Vagas</li>
-                    <li>Avisos</li>
-                    <li>Posts</li>
-                </ul> 
-                
+                <form action="../assets/methods/pull-data.php" method="POST">
+                    <button type="submit" name="filter" value="all">Todos</button>    
+                    <button type="submit" name="filter" value="vacancies">Vagas</button>
+                    <button type="submit" name="filter" value="warnings">Avisos</button>
+                    <button type="submit" name="filter" value="posts">Posts</button>
+                </form>
             </div>
         </nav>
     </header>
@@ -53,15 +51,18 @@
     <main class="main__board">
             <!-- ALERTA DE GAMBIARRA-->
              <!--depois faço direito com o display grid-->
+        <?php
+            //add posts dinamically
+            // include_once '../assets/database/db-connection.php';
+            
+            // $stmt = $db->prepare("SELECT * FROM vacancies");
+            // $stmt->execute();
 
-        <div class="post">1</div>
-        <div class="post">2</div>
-        <div class="post">3</div>
-        <div class="post">4</div>
-        <div class="post">5</div>
-        <div class="post">4</div>
-        <div class="post">5</div>
-        
+            // while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            //     echo $row["enterprise_name"];
+            //     echo $row["job"];
+            // }
+        ?>
     </main>
     
     <footer class="footer__content">
