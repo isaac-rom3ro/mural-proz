@@ -1,13 +1,13 @@
 body{
     font-family: 'Montserrat', sans-serif ;font-size: 22px;
+;
 }
 
 .header__content{
     background-color: #392269;
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 15vh;
+    height: 19vh;
 }
 
 
@@ -66,7 +66,7 @@ body{
 }
 
 .header__user .subscribe{
-    background-color: #ff8600;
+    background-image: linear-gradient(to right bottom, #ff8600, #ca562c);
     padding: 4%;
     border-radius: 12px;
 }
@@ -92,5 +92,9 @@ body{
     align-items: center;
     justify-content: space-around;
     height: 5vh;
+}
+
+.nav__list-sections li{
+    cursor: pointer;
 }
     

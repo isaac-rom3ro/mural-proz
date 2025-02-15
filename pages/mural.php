@@ -1,20 +1,22 @@
-<!--Pasta asset contem tudo relacionado com estilo, interacao, imagens-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mural Proz</title>
-    <link rel="stylesheet" href="../assets/style/reset.css">                                   <!--limpa estilo css padrão dos navegadores -->
+    <link rel="stylesheet" href="../assets/style/reset.css">                                   
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="../assets/style/header.css">
     <link rel="stylesheet" href="../assets/style/main.css">
     <link rel="stylesheet" href="../assets/style/footer.css">
-</head>
-<body>
 
+    <script src="../assets/src/script.js" defer></script>
+    <script src="../assets/src/add-data.js" defer></script>
+</head>
+
+<body>
     <header class="header__content">
-        <div class="header__top">  
+        <div class="header__top">
             <div class="header__logo">
                 <div class="img-background">
                     <img class="header__img" src="../assets/images/placeholderLogo.png" alt="">
@@ -27,52 +29,131 @@
 
             <div class="header__user">
                 <div class="a-button login">
-                   <a class="" href="../index.php"> login </a>
+                    <a class="" href=""> Login </a>
                 </div>
 
-                 <div class="a-button subscribe">
-                    <a href="./register-page.php"> Cadrastre-se</a>
+                <div class="a-button subscribe">
+                    <a href=""> Cadrastre-se</a>
                 </div>
             </div>
         </div>
-                
-        <nav class="header__nav"> 
+
+        <nav class="header__nav">
             <div class="nav__content">
-                <form action="../assets/methods/pull-data.php" method="POST">
-                    <button type="submit" name="filter" value="all">Todos</button>    
-                    <button type="submit" name="filter" value="vacancies">Vagas</button>
-                    <button type="submit" name="filter" value="warnings">Avisos</button>
-                    <button type="submit" name="filter" value="posts">Posts</button>
-                </form>
+                <ul class="nav__list-sections">
+                    <li>Todos</li>
+                    <li>Vagas</li>
+                    <li>Avisos</li>
+                    <li>Posts</li>
+                </ul>
             </div>
         </nav>
     </header>
 
-    <main class="main__board">
-            <!-- ALERTA DE GAMBIARRA-->
-             <!--depois faço direito com o display grid-->
-        <?php
-            //add posts dinamically
-            // include_once '../assets/database/db-connection.php';
-            
-            // $stmt = $db->prepare("SELECT * FROM vacancies");
-            // $stmt->execute();
+    <main class="main__content">
+        <div class="board-posts">
+            <div class="post p1">
+                <div class="pin">
+                    <img src="../assets/images/pin_yellow.png" alt="">
+                </div>
+            </div>
 
-            // while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            //     echo $row["enterprise_name"];
-            //     echo $row["job"];
-            // }
-        ?>
+            <div class="post p2">
+                <div class="pin">
+                    <img src="../assets/images/pin_purple.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p3">
+                <div class="pin">
+                    <img src="../assets/images/pin_green.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p4">
+                <div class="pin">
+                    <img src="../assets/images/pin_red.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p5">
+                <div class="pin">
+                    <img src="../assets/images/pin_pink.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p3">
+                <div class="pin">
+                    <img src="../assets/images/pin_blue.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p2">
+                <div class="pin">
+                    <img src="../assets/images/pin_orange.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p1">
+                <div class="pin">
+                    <img src="../assets/images/pin_darkblue.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p4">
+                <div class="pin">
+                    <img src="../assets/images/pin_green.png" alt="">
+                </div>
+            </div>
+
+            <div class="post p2">
+                <div class="pin">
+                    <img src="../assets/images/pin_pink.png" alt="">
+                </div>
+            </div>
+
+            <div onclick="openWindow()" class="main__buttom" id="mainButton">
+                <button class="buttom-add-post">+</button>
+            </div>
+        </div>
     </main>
-    
+
+    <div class="window__content hidden" id="windowContent">
+        <div class="create-post" id="createPost">
+            <div class="exit" id="exit">
+                X
+            </div>
+
+            <div>
+                <select name="select-option" id="select-option" class="select-option">
+                    <option value="vancacies">Vagas</option>
+                    <option value="mural_warnings">Avisos</option>
+                    <option value="posts">Posts</option>
+                </select>
+             </div>
+
+            <div id="inside-post-content" class="post-content">
+                <input type="text" class="enterprise-name" id="enterprise-name" placeholder="Nome da Empresa">
+
+                <input type="text" class="job" id="job" placeholder="Cargo">
+
+                <input type="text" class="vacancy-description" id="vacancy-description" placeholder="Descricao">
+
+                <input type="text" class="vacancy-address" id="vacancy-address" placeholder="Endereço">
+
+                <input type="text" class="vacancy-link" id="vacancy-link" placeholder="Link">
+
+                <input type="text" class="vacancy-phone-number" id="vacancy-phone-number" placeholder="Telefone">
+            </div>
+        </div>
+    </div>
+
     <footer class="footer__content">
         <div class="footer__credits">
             <div class="credits-github">
                 <h1>Git hub dos cria</h1>
             </div>
-
         </div>
-        
     </footer>
 </body>
 </html>
