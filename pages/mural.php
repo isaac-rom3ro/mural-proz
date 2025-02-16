@@ -29,7 +29,7 @@
 
             <div class="header__user">
                 <div class="a-button login">
-                    <a class="" href=""> Login </a>
+                    <a class="" href="">Login</a>
                 </div>
 
                 <div class="a-button subscribe">
@@ -40,25 +40,36 @@
 
         <nav class="header__nav">
             <div class="nav__content">
-                <ul class="nav__list-sections">
-                    <li>Todos</li>
-                    <li>Vagas</li>
-                    <li>Avisos</li>
-                    <li>Posts</li>
-                </ul>
+                    <!--Send the filter chosen to fill the url-->
+                    <form action="../assets/methods/content-filter.php" method="POST" name="filter-form" class="filter-form">
+                        <button name="filter" type="submit" value="all">Todos</button>
+                        <button name="filter" type="submit" value="vancacies">Vagas</button>
+                        <button name="filter" type="submit" value="warnings">Avisos</button>
+                        <button name="filter" type="submit" value="posts">Posts</button>
+                    </form>
             </div>
         </nav>
     </header>
 
     <main class="main__content">
         <div class="board-posts">
-            <div class="post p1">
-                <div class="pin">
-                    <img src="../assets/images/pin_yellow.png" alt="">
-                </div>
-            </div>
+            <?php
+                try {
+                    include_once "../assets/includes/show-content.php";
+                    include_once "../assets/database/db-connection.php";
 
-            <div class="post p2">
+                      showPosts($db);
+                } catch(Exception $e) {
+                    echo $e->getMessage();
+                }
+
+            ?>
+            <!-- <div class="post p1"> -->
+            <!-- </div> -->
+            <!-- <div class="pin"> -->
+                <!-- <img src="../assets/images/pin_yellow.png" alt=""> -->
+            <!-- </div> -->
+                <div class="post p2">
                 <div class="pin">
                     <img src="../assets/images/pin_purple.png" alt="">
                 </div>
@@ -111,12 +122,12 @@
                     <img src="../assets/images/pin_pink.png" alt="">
                 </div>
             </div>
-
-            <div onclick="openWindow()" class="main__buttom" id="mainButton">
-                <button class="buttom-add-post">+</button>
-            </div>
         </div>
     </main>
+
+    <div onclick="openWindow()" class="main__buttom" id="mainButton">
+        <button class="buttom-add-post">+</button>
+    </div>
 
     <div class="window__content hidden" id="windowContent">
         <div class="create-post" id="createPost">
