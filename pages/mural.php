@@ -37,82 +37,13 @@
 
         <nav class="header__nav">
             <div class="nav__content">
-                <ul class="nav__list-sections">
-                    <li>Todos</li>
-                    <li>Vagas</li>
-                    <li>Avisos</li>
-                    <li>Posts</li>
-                </ul>
+
             </div>
         </nav>
     </header>
 
     <main class="main__content">
-        <div class="board-posts">
-            <div class="post p1">
-                <div class="pin">
-                    <img src="../assets/images/pin_yellow.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p2">
-                <div class="pin">
-                    <img src="../assets/images/pin_purple.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p3">
-                <div class="pin">
-                    <img src="../assets/images/pin_green.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p4">
-                <div class="pin">
-                    <img src="../assets/images/pin_red.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p5">
-                <div class="pin">
-                    <img src="../assets/images/pin_pink.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p3">
-                <div class="pin">
-                    <img src="../assets/images/pin_blue.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p2">
-                <div class="pin">
-                    <img src="../assets/images/pin_orange.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p1">
-                <div class="pin">
-                    <img src="../assets/images/pin_darkblue.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p4">
-                <div class="pin">
-                    <img src="../assets/images/pin_green.png" alt="">
-                </div>
-            </div>
-
-            <div class="post p2">
-                <div class="pin">
-                    <img src="../assets/images/pin_pink.png" alt="">
-                </div>
-            </div>
-
-            <div class="main__buttom" id="mainButton">
-                <button class="buttom-add-post">+</button>
-            </div>
-        </div>
+       
     </main>
 
     <div class="window__content hidden" id="windowContent">
