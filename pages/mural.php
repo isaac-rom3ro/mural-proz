@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="../assets/style/header.css">
     <link rel="stylesheet" href="../assets/style/main.css">
     <link rel="stylesheet" href="../assets/style/footer.css">
-
-    <script src="../assets/src/script.js" defer></script>
-    <script src="../assets/src/add-data.js" defer></script>
 </head>
 
 <body>
@@ -112,7 +109,7 @@
                 </div>
             </div>
 
-            <div onclick="openWindow()" class="main__buttom" id="mainButton">
+            <div class="main__buttom" id="mainButton">
                 <button class="buttom-add-post">+</button>
             </div>
         </div>
@@ -155,5 +152,10 @@
             </div>
         </div>
     </footer>
+
+    
+    <script src="../assets/src/content-focus.js"></script>
+    <script src="../assets/src/add-data.js"></script>
+    <script src="../assets/src/click-add-content.js"></script>
 </body>
 </html>
