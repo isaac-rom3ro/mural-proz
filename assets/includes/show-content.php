@@ -1,14 +1,9 @@
 <?php
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        include_once '../database/db-connection.php';
-        $filter = $_POST["filter"];
-           
-    }
-
+    //Query from all tables
     function showAll($db) {
-        showVacancies($db);
-        showPosts($db);
-        showWarnings($db);
+            showVacancies($db);
+            showPosts($db);
+            showWarnings($db);
     }
 
     function showVacancies($db) {
@@ -32,6 +27,15 @@
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $subject = $row["subject"];
             $description = $row["description"];
+
+            echo " 
+             <div class='post p1'>
+                 <div class='pin'>
+                     <p>$subject</p>
+                     <p>$description</p>
+                 </div>
+             </div>
+            ";
         }
     }
 
