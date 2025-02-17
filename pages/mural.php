@@ -40,7 +40,7 @@
                     <!--Send the filter chosen to fill the url-->
                     <form action="../assets/methods/content-filter.php" method="POST" name="filter-form" class="filter-form">
                         <button name="filter" type="submit" value="all">Todos</button>
-                        <button name="filter" type="submit" value="vancacies">Vagas</button>
+                        <button name="filter" type="submit" value="vacancies">Vagas</button>
                         <button name="filter" type="submit" value="warnings">Avisos</button>
                         <button name="filter" type="submit" value="posts">Posts</button>
                     </form>
@@ -54,8 +54,21 @@
                 try {
                     include_once "../assets/includes/show-content.php";
                     include_once "../assets/database/db-connection.php";
+                    //get the filter
+                    $filter = $_GET["filter"];
 
-                      showPosts($db);
+                    //filter the content based on the value above
+                    if(!isset($filter)) {
+                        showAll($db);
+                    } else if($filter == "vacancies") {
+                        showVacancies($db);
+                    } else if($filter == "warnings") {
+                        showVacancies($db);
+                    } else if($filter == "posts") {
+                        showPosts($db);
+                    } else {
+                        showAll($db);
+                    }
                 } catch(Exception $e) {
                     echo $e->getMessage();
                 }
@@ -132,28 +145,32 @@
             <div class="exit" id="exit">
                 X
             </div>
+            
+            <form action="">
+                <div>
+                    <select name="select-option" id="select-option" class="select-option">
+                        <option value="vancacies">Vagas</option>
+                        <option value="mural_warnings">Avisos</option>
+                        <option value="posts">Posts</option>
+                    </select>
+                </div>
+                
+                <div id="inside-post-content" class="post-content">
+                    <input type="text" class="enterprise-name" id="enterprise-name" placeholder="Nome da Empresa">
+                    
+                    <input type="text" class="job" id="job" placeholder="Cargo">
+                    
+                    <input type="text" class="vacancy-description" id="vacancy-description" placeholder="Descricao">
+                    
+                    <input type="text" class="vacancy-address" id="vacancy-address" placeholder="Endereço">
+                    
+                    <input type="text" class="vacancy-link" id="vacancy-link" placeholder="Link">
+                    
+                    <input type="text" class="vacancy-phone-number" id="vacancy-phone-number" placeholder="Telefone">
+                </div>
+            </form>
 
-            <div>
-                <select name="select-option" id="select-option" class="select-option">
-                    <option value="vancacies">Vagas</option>
-                    <option value="mural_warnings">Avisos</option>
-                    <option value="posts">Posts</option>
-                </select>
-             </div>
-
-            <div id="inside-post-content" class="post-content">
-                <input type="text" class="enterprise-name" id="enterprise-name" placeholder="Nome da Empresa">
-
-                <input type="text" class="job" id="job" placeholder="Cargo">
-
-                <input type="text" class="vacancy-description" id="vacancy-description" placeholder="Descricao">
-
-                <input type="text" class="vacancy-address" id="vacancy-address" placeholder="Endereço">
-
-                <input type="text" class="vacancy-link" id="vacancy-link" placeholder="Link">
-
-                <input type="text" class="vacancy-phone-number" id="vacancy-phone-number" placeholder="Telefone">
-            </div>
+            <button type="submit">Add Content</button>
         </div>
     </div>
 
