@@ -29,8 +29,8 @@ const selectOption = document.getElementById("select-option").addEventListener("
         divTest.innerHTML = "";
 
         let subject = document.createElement('input');
-        subject.name = "post-description";
-        subject.id = "post-description";
+        subject.name = "post-subject";
+        subject.id = "post-subject";
         subject.className = "post-subject";
         subject.placeholder = "Assunto";
 
@@ -62,6 +62,7 @@ const selectOption = document.getElementById("select-option").addEventListener("
         job.placeholder = "Cargo";
 
         let description = document.createElement("textarea");
+        description.name = "vacancy-description";
         description.cols = "0";
         description.rows = "11";
         description.maxLength = "704"

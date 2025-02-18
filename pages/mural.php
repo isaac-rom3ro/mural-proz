@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -145,7 +149,7 @@
 
     <div class="window__content hidden" id="windowContent">
         <div class="create-post" id="createPost">
-            <form action="">
+            <form action="../assets/methods/add-content-db.php" method="POST">
                 <div>
                     <select name="select-option" id="select-option" class="select-option">
                        <option value="vancacies">Vagas</option>
@@ -157,23 +161,22 @@
                 </div>
                 
                 <div id="inside-post-content" class="post-content">
-                    <input type="text" class="enterprise-name" id="enterprise-name" placeholder="Nome da Empresa">
+                    <input type="text" class="enterprise-name" id="enterprise-name" name="enterprise-name" placeholder="Nome da Empresa">
 
-                    <input type="text" class="job" id="job" placeholder="Cargo">
+                    <input type="text" class="job" id="job" name="job" placeholder="Cargo">
 
-                    <textarea cols="0" rows="11" maxlength="704" type="text" class="vacancy-description"
-                        id="vacancy-description" placeholder="Descrição"></textarea>
+                    <textarea cols="0" rows="11" maxlength="704" type="text" class="vacancy-description" id="vacancy-description" name="vacancy-description" placeholder="Descrição"></textarea>
 
-                    <input type="text" class="vacancy-address" id="vacancy-address" placeholder="Endereço">
+                    <input type="text" class="vacancy-address" id="vacancy-address" name="vacancy-address" placeholder="Endereço">
 
-                    <input type="text" class="vacancy-link" id="vacancy-link" placeholder="Link">
+                    <input type="text" class="vacancy-link" id="vacancy-link" name="vacancy-link" placeholder="Link">
 
-                    <input type="text" class="vacancy-phone-number" id="vacancy-phone-number"
-                        placeholder="Telefone (00) 0 0000-0000">
+                    <input type="text" class="vacancy-phone-number" id="vacancy-phone-number" name="vacancy-phone-number" placeholder="Telefone (00) 0 0000-0000">
                 </div>
                 
                 <div class="buttons-create-post">
-                    
+                   
+                <!--submit button-->
                     <button class="publish" type="submit"> 
                         <i class="fa fa-pencil" aria-hidden="true"></i>Publicar
                     </button>
