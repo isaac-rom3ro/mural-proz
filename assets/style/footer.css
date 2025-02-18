@@ -8,4 +8,20 @@
 
 .credits-github{
     color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.credits-github .github{
+    height: 20px;
+    padding-top: 2%;
+}
+
+.credits-github a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.credits-github span{
+   margin-left: 5px;
 }

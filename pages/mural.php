@@ -22,7 +22,7 @@
         <div class="header__top">
             <div class="header__logo">
                 <div class="img-background">
-                    <img class="header__img" src="../assets/images/placeholderLogo.png" alt="">
+                    <img class="header__img" src="../assets/images/logo-mural.png" alt="">
                 </div>
             </div>
 
@@ -192,11 +192,12 @@
     <footer class="footer__content">
         <div class="footer__credits">
             <div class="credits-github">
-                <h1>Git hub dos cria</h1>
+                <a href="https://github.com/is4ac-romero" target="_blank"><img src="../assets/images/github-logo.png" width="20px" height="20px" alt="" class="github"><span>Is4ac-Romero</span></a>
+                <a href="https://github.com/Ramon-Vitor" target="_blank" ><img src="../assets/images/github-logo.png" width="20px" height="20px" alt="" class="github">Ramon-Vitor</span></a>
+                <a href="https://github.com/DesenvolvedorCarlos" target="_blank"><img src="../assets/images/github-logo.png" width="20px" height="20px" alt="" class="github"><span>DesenvolvedorCarlos</span></a>
             </div>
         </div>
     </footer>
-
     
     <script src="../assets/src/content-focus.js"></script>
     <script src="../assets/src/add-data.js"></script>
