@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="a-button subscribe">
-                    <a href=""> Cadrastre-se</a>
+                    <a href="">Cadastre-se</a>
                 </div>
             </div>
         </div>
