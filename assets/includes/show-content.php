@@ -27,15 +27,6 @@
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $subject = $row["subject"];
             $description = $row["description"];
-
-            echo " 
-             <div class='post p1'>
-                 <div class='pin'>
-                     <p>$subject</p>
-                     <p>$description</p>
-                 </div>
-             </div>
-            ";
         }
     }
 

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mural Proz</title>
-    <link rel="stylesheet" href="../assets/style/reset.css">                                   
+    <link rel="stylesheet" href="../assets/style/reset.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="../assets/style/header.css">
     <link rel="stylesheet" href="../assets/style/main.css">
+    <link rel="stylesheet" href="../assets/style/posts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/style/footer.css">
 </head>
 
@@ -74,60 +76,61 @@
                 }
 
             ?>
-            <!-- <div class="post p1"> -->
-            <!-- </div> -->
-            <!-- <div class="pin"> -->
-                <!-- <img src="../assets/images/pin_yellow.png" alt=""> -->
-            <!-- </div> -->
-                <div class="post p2">
+            <div class="post paper-green">
+                <div class="pin">
+                    <img src="../assets/images/pin_yellow.png" alt="">
+                </div>
+            </div>
+
+            <div class="post paper-blue">
                 <div class="pin">
                     <img src="../assets/images/pin_purple.png" alt="">
                 </div>
             </div>
 
-            <div class="post p3">
+            <div class="post paper-orange">
                 <div class="pin">
                     <img src="../assets/images/pin_green.png" alt="">
                 </div>
             </div>
 
-            <div class="post p4">
+            <div class="post paper-yellow">
                 <div class="pin">
                     <img src="../assets/images/pin_red.png" alt="">
                 </div>
             </div>
 
-            <div class="post p5">
+            <div class="post paper-pink">
                 <div class="pin">
                     <img src="../assets/images/pin_pink.png" alt="">
                 </div>
             </div>
 
-            <div class="post p3">
+            <div class="post paper-orange">
                 <div class="pin">
                     <img src="../assets/images/pin_blue.png" alt="">
                 </div>
             </div>
 
-            <div class="post p2">
+            <div class="post paper-blue">
                 <div class="pin">
                     <img src="../assets/images/pin_orange.png" alt="">
                 </div>
             </div>
 
-            <div class="post p1">
+            <div class="post paper-green">
                 <div class="pin">
                     <img src="../assets/images/pin_darkblue.png" alt="">
                 </div>
             </div>
 
-            <div class="post p4">
+            <div class="post paper-yellow">
                 <div class="pin">
                     <img src="../assets/images/pin_green.png" alt="">
                 </div>
             </div>
 
-            <div class="post p2">
+            <div class="post paper-blue">
                 <div class="pin">
                     <img src="../assets/images/pin_pink.png" alt="">
                 </div>
@@ -142,35 +145,44 @@
 
     <div class="window__content hidden" id="windowContent">
         <div class="create-post" id="createPost">
-            <div class="exit" id="exit">
-                X
-            </div>
-            
             <form action="">
                 <div>
                     <select name="select-option" id="select-option" class="select-option">
-                        <option value="vancacies">Vagas</option>
+                       <option value="vancacies">Vagas</option>
                         <option value="mural_warnings">Avisos</option>
                         <option value="posts">Posts</option>
                     </select>
+
+                     <div class="exit" id="exit">X</div>
                 </div>
                 
                 <div id="inside-post-content" class="post-content">
                     <input type="text" class="enterprise-name" id="enterprise-name" placeholder="Nome da Empresa">
-                    
+
                     <input type="text" class="job" id="job" placeholder="Cargo">
-                    
-                    <input type="text" class="vacancy-description" id="vacancy-description" placeholder="Descricao">
-                    
+
+                    <textarea cols="0" rows="11" maxlength="704" type="text" class="vacancy-description"
+                        id="vacancy-description" placeholder="Descrição"></textarea>
+
                     <input type="text" class="vacancy-address" id="vacancy-address" placeholder="Endereço">
-                    
+
                     <input type="text" class="vacancy-link" id="vacancy-link" placeholder="Link">
+
+                    <input type="text" class="vacancy-phone-number" id="vacancy-phone-number"
+                        placeholder="Telefone (00) 0 0000-0000">
+                </div>
+                
+                <div class="buttons-create-post">
                     
-                    <input type="text" class="vacancy-phone-number" id="vacancy-phone-number" placeholder="Telefone">
+                    <button class="publish" type="submit"> 
+                        <i class="fa fa-pencil" aria-hidden="true"></i>Publicar
+                    </button>
+                    
+                    <button class="clear">
+                        <i class="fa fa-eraser" aria-hidden="true"></i>Limpar
+                    </button>
                 </div>
             </form>
-
-            <button type="submit">Add Content</button>
         </div>
     </div>
 

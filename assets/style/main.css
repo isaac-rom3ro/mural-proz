@@ -31,32 +31,13 @@ body{
     border: 0px solid ;
     cursor: pointer;
 } 
-.p1{
-    background-color: #8afbad;
-}
-.p2{
-    background-color: #a1d9ff;
-}
-.p3{
-    background-color: #fab186;
-}
-.p4{
-    background-color: #fff28d;
-}
-.p5{
-    background-color: #ffa5c3;
-}
-
-.board-posts .post .pin{
-    box-shadow: 0px 70px 12px -60px rgba(94, 94, 94, 0.27);
-}
 
 .post .pin img{
     width: 12%;
     position: absolute;
     bottom: 88%;
     left: 45%;
-    
+    pointer-events: none;
 }
 
 .main__content .main__buttom {
@@ -81,106 +62,4 @@ body{
 
 .main__buttom.hidden{
     display: none;
-}
-
-.window__content{
-    background-color: #20162936;
-    height: 95vh;
-    width: 100vw;
-    position: fixed;
-    top: 0%;
-    display: flex;
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
-}
-
-.big-post{
-    width: 550px;
-    height: 550px;
-    display: flex;
-    position: fixed;
-    justify-content: center;
-}
-
-.create-post{
-    background-color: #ffffff;
-    width: 550px;
-    height: 550px;
-    position: fixed;
-    justify-content: center;
-}
-
-.post-content{
-    display: grid;
-    grid-template-areas: "input1";
-    
-}
-
-.select-option{
-    width: 10vw;
-    border: none;
-    background-color: transparent;
-    border-bottom: solid 1px;
-}
-
-.enterprise-name{
-    grid-area: "input1";
-}
-.job{
-    grid-area: "input2";
-
-}
-.vacancy-description{
-    grid-area: "input3";
-
-}
-.vacancy-address{
-    grid-area: "input4";
-
-}
-.vacancy-link{
-    grid-area: "input5";
-
-}
-.vacancy-phone-number{
-    grid-area: "input6";
-
-}
-
-.create-post.hidden{
-    display: none;
-}
-
-.exit{
-    position: absolute;
-    left: 93%;
-    top: 1%;
-    width: 2vw;
-    height: 2vw;
-    border: 1px;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.window__content.hidden{
-    display: none;
-}
-
-@keyframes openPost{
-    from{
-        opacity: 0;
-        transform: translate3d(20px, 0, 5px);
-    }
-    to{
-        opacity: 1;
-        transform: translate3d(0,0,0);
-    }
-}
-
-.animation{
-    animation: openPost 0.3s;
 }

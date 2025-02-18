@@ -1,13 +1,11 @@
 body{
     font-family: 'Montserrat', sans-serif ;font-size: 22px;
-;
 }
 
 .header__content{
     background-color: #392269;
     display: flex;
     flex-direction: column;
-    height: 19vh;
 }
 
 
@@ -16,6 +14,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     gap: 18%;
+    align-items: center;
 }
 
 .header__logo{
@@ -34,6 +33,7 @@ body{
     height: 10vh;
     width: 10vh;
     padding: 0px;
+    pointer-events: none;
 }
 
 .header__h1{
@@ -42,6 +42,7 @@ body{
     align-items: center;
     font-size: xx-large;
     text-wrap: nowrap;
+    pointer-events: none;
 }
 
 .header__user{
@@ -55,7 +56,7 @@ body{
 .header__user .a-button{
     width: 20vw;
     text-align: center;
-
+    margin-left: 5%;
 }
 
 .header__user .a-button a{
@@ -97,4 +98,3 @@ body{
 .nav__list-sections li{
     cursor: pointer;
 }
-    

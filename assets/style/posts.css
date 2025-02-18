@@ -1,0 +1,212 @@
+.paper-green{
+    background-color: #8afbad;
+}
+.paper-blue{
+    background-color: #a1d9ff;
+}
+.paper-orange{
+    background-color: #fab186;
+}
+.paper-yellow{
+    background-color: #fff28d;
+}
+.paper-pink{
+    background-color: #ffa5c3;
+}
+
+.window__content{
+    background-color: #20162969;
+    height: 95vh;
+    width: 100vw;
+    position: fixed;
+    top: 0%;
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-post{
+    width: 550px;
+    height: 550px;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.create-post{
+    background-color: #fff28d;
+    width: 550px;
+    height: 550px;
+    position: fixed;
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+}
+
+.post-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "input1 input1 input1"
+    "input2 input2 input2"
+    "input3 input3 input3"
+    "input4 input4 input4"
+    "input5 input5 input6";
+
+}
+
+.select-option{
+    width: 10vw;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 1px;
+    text-align: center;
+    font-size: 0.7em;
+
+}
+
+.select-option:focus{
+    outline: none;
+    transform: scale(1.05);
+    transition-duration:0.1s;
+}
+
+.select-option:hover{
+    transform: scale(1.05);
+    transition-duration:0.1s;
+}
+
+.exit{
+    position: absolute;
+    left: 94%;
+    top: 1.5%;
+    width: 2vw;
+    height: 2vw;
+    border: 1px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exit:hover{
+    transform: scale(1.2);
+    transition-duration:0.2s;
+}
+
+.enterprise-name, .warn-title, .post-subject{
+    grid-area: input1;
+    text-align: center;
+    font-size: 1em;
+    margin: 5% 6% ;
+
+}
+.job, .warn-description, .post-description{
+    grid-area: input2;
+}
+.vacancy-description{
+    grid-area: input3;
+    margin-top: 3%;
+
+}
+.vacancy-address{
+    grid-area: input4;
+    margin-top: 4%;
+
+}
+.vacancy-link{
+    grid-area: input5;
+    margin-right: 10%;
+    margin-top: 5%;
+    text-align: center;
+}
+.vacancy-phone-number{
+    grid-area: input6;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.create-post input{
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid;
+    border-color: #000;
+    font-size: 0.7em;
+    
+}
+
+.create-post input:focus{
+    outline: none;
+}
+
+.create-post textarea{
+    background-color: transparent;
+    border: transparent;
+    text-align: left;
+    font-size: 0.7em;
+    resize: none;
+    line-height: 24px;
+    background-image: linear-gradient(transparent 23px, #000 24px);
+    background-size: 100% 24px;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.buttons-create-post{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    gap: 50%;
+    flex-wrap: wrap;
+    align-self: end;
+    align-content: end;
+    position: absolute;
+    top: 90%;
+    width: 550px;
+}
+
+.buttons-create-post button{   
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 17%;
+    font-size: 0.7em;
+    border-bottom: 1px solid #000;
+}
+
+.buttons-create-post button:hover{
+    transform: scale(1.1);
+    transition-duration:0.1s;
+}
+
+.buttons-create-post button .fa{
+    margin-right: 10%;
+}
+
+.create-post.hidden{
+    display: none;
+}
+
+.window__content.hidden{
+    display: none;
+}
+
+@keyframes openPost{
+    from{
+        opacity: 0;
+        transform: translate3d(20px, 0, 5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.animation{
+    animation: openPost 0.3s;
+}
