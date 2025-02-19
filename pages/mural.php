@@ -74,7 +74,7 @@
                     } else if($filter == "vacancies") {
                         showVacancies($db);
                     } else if($filter == "warnings") {
-                        showVacancies($db);
+                        showWarnings($db);
                     } else if($filter == "posts") {
                         showPosts($db);
                     } else {
