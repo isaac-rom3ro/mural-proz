@@ -13,9 +13,13 @@ clickedPost.forEach(post => { //for each post was added a function on click
             const createPost = document.getElementById('createPost');
             createPost.classList.add('hidden');
     
-            //hidden the button of adding posts (UX) 
+            //hidden the buttons of adding posts (UX) 
+            const btnGit = document.getElementById('mainButton-github');
+            btnGit.classList.add('hidden');
+
             const btn = document.getElementById('mainButton');
             btn.classList.add('hidden');
+            
         
             //create a div and add properties
             const focusPost = document.createElement("div");
@@ -40,6 +44,7 @@ clickedPost.forEach(post => { //for each post was added a function on click
             window.addEventListener('click', (event) =>{
                 if(event.target.id == 'exit' || event.target.id == 'windowContent'){
                     window.classList.add("hidden");
+                    btnGit.classList.remove('hidden');
                     btn.classList.remove('hidden');
                     focusPost.remove();
                 };

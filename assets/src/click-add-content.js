@@ -10,7 +10,11 @@ function openWindow (){
 
     const window = document.getElementById('windowContent');
     window.classList.remove('hidden');
-    
+
+    //hidden the buttons of adding posts (UX) 
+    const btnGit = document.getElementById('mainButton-github');
+    btnGit.classList.add('hidden')
+
     const btn = document.getElementById('mainButton');
     btn.classList.add('hidden');
     

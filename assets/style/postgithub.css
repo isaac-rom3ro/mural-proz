@@ -1,0 +1,51 @@
+.git-post{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(to right bottom, #0c064a, #000000);
+    padding: 1vh;
+}
+
+.git-post .header-git{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.git-post .exit{
+    color: #fff;
+}
+
+.git-post .header-git .logo-git-post{
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+}
+
+.git-post .devscredits{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vw;
+    transition: 0.3s;
+}
+
+.git-post .devscredits:hover{
+    transform: scale(1.3);
+}
+
+.git-post .devscredits a{
+    color: #fff;
+    margin-left: 2vw;
+
+}
+
+.git-post .devscredits .pics-devs{
+    height: 8vh;
+    border-radius: 50%;
+}

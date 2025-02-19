@@ -66,12 +66,21 @@ body{
     font-size: large;
 }
 
+.header__user .a-button:hover{
+    transform: scale(1.1);
+}
+
 .header__user .subscribe{
     background-image: linear-gradient(to right bottom, #ff8600, #ca562c);
     padding: 4%;
     border-radius: 12px;
+    transition: 0.2s;
 }
 
+.header__user .subscribe:hover{
+    transform: scale(1.1);
+    background-image: linear-gradient(to right bottom, #ff9d00, #ca562c);
+}
 
 .header__nav{
     background-color: #593493;
@@ -87,7 +96,7 @@ body{
     height: 10vh;
 }
 
-.nav__list-sections{
+.nav__list-sections form{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -95,6 +104,17 @@ body{
     height: 5vh;
 }
 
-.nav__list-sections li{
+.nav__list-sections .filter{
     cursor: pointer;
+    border: none;
+    height: 4vh;
+    width: 15vw;
+    font-size: large;
+    color: #fff;
+    transition: 0.2s;
+    background-color: transparent;
+}
+
+.nav__list-sections .filter:hover{
+    transform: scale(1.2);
 }

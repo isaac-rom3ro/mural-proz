@@ -16,7 +16,7 @@
 
 .window__content{
     background-color: #20162969;
-    height: 95vh;
+    height: 100vh;
     width: 100vw;
     position: fixed;
     top: 0%;
@@ -60,17 +60,18 @@
 .select-option{
     width: 10vw;
     border: none;
+    border: 0px solid transparent;
     background-color: transparent;
     border-bottom: solid 1px;
     text-align: center;
     font-size: 0.7em;
-
 }
 
 .select-option:focus{
     outline: none;
     transform: scale(1.05);
     transition-duration:0.1s;
+    background-color: #fff28d;
 }
 
 .select-option:hover{
