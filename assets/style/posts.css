@@ -1,16 +1,16 @@
-.paper-green{
+.paper-0{
     background-color: #8afbad;
 }
-.paper-blue{
+.paper-1{
     background-color: #a1d9ff;
 }
-.paper-orange{
+.paper-2{
     background-color: #fab186;
 }
-.paper-yellow{
+.paper-3{
     background-color: #fff28d;
 }
-.paper-pink{
+.paper-4{
     background-color: #ffa5c3;
 }
 
@@ -159,25 +159,28 @@ textarea:focus{
 }
 
 .buttons-create-post{
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
-    gap: 50%;
-    flex-wrap: wrap;
-    align-self: end;
-    align-content: end;
-    position: absolute;
     top: 90%;
     width: 550px;
+    display: flex;
+    justify-content: center;
 }
 
 .buttons-create-post button{   
+    display: flex;
+    align-items: center;
     background-color: transparent;
+    margin-top: 4px;
     border: none;
     cursor: pointer;
     width: 17%;
     font-size: 0.7em;
     border-bottom: 1px solid #000;
+}
+
+.buttons-create-content-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 .buttons-create-post button:hover{

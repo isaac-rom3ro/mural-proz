@@ -83,67 +83,7 @@
                 } catch(Exception $e) {
                     echo $e->getMessage();
                 }
-
             ?>
-            <div class="post paper-green">
-                <div class="pin">
-                    <img src="../assets/images/pin_yellow.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-blue">
-                <div class="pin">
-                    <img src="../assets/images/pin_purple.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-orange">
-                <div class="pin">
-                    <img src="../assets/images/pin_green.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-yellow">
-                <div class="pin">
-                    <img src="../assets/images/pin_red.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-pink">
-                <div class="pin">
-                    <img src="../assets/images/pin_pink.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-orange">
-                <div class="pin">
-                    <img src="../assets/images/pin_blue.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-blue">
-                <div class="pin">
-                    <img src="../assets/images/pin_orange.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-green">
-                <div class="pin">
-                    <img src="../assets/images/pin_darkblue.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-yellow">
-                <div class="pin">
-                    <img src="../assets/images/pin_green.png" alt="">
-                </div>
-            </div>
-
-            <div class="post paper-blue">
-                <div class="pin">
-                    <img src="../assets/images/pin_pink.png" alt="">
-                </div>
-            </div>
         </div>
 
         <div class="main__buttom" id="mainButton">
@@ -188,17 +128,18 @@
                 </div>
 
                 <div class="buttons-create-post">
-
                     <!--submit button-->
                     <button class="publish" type="submit">
                         <i class="fa fa-pencil" aria-hidden="true"></i>Publicar
                     </button>
+                </div>
+            </form>
 
-                    <button class="clear">
+                <div class="buttons-create-post">
+                    <button id="clear-button" class="clear">
                         <i class="fa fa-eraser" aria-hidden="true"></i>Limpar
                     </button>
                 </div>
-            </form>
         </div>
     </div>
 
@@ -206,6 +147,7 @@
     <script src="../assets/src/add-data.js"></script>
     <script src="../assets/src/click-add-content.js"></script>
     <script src="../assets/src/click-github.js"></script>
+    <script src="../assets/src/clear-data.js"></script>
 </body>
 
 </html>

@@ -11,12 +11,29 @@
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $color = rand(0, 4);
+            $pin = rand(0, 9);
+
             $enterpriseName = $row["enterprise_name"];
             $job = $row["job"];
             $description = $row["description"];
             $address = $row["address"];
             $link = $row["link"];
             $enterprisePhoneNumber= $row["enterprise_phone_number"];
+
+            echo "
+            <div class='post paper-$color'>
+                <div class='pin'>
+                    <img src='../assets/images/pin-$pin.png'>
+                    <p>$enterpriseName</p>
+                    <p>$job</p>
+                    <p>$description</p>
+                    <p>$address</p>
+                    <p>$link</p>
+                    <p>$enterprisePhoneNumber</p>
+                </div> 
+            </div>
+            ";
         }
     }
 
@@ -25,8 +42,21 @@
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $color = rand(0, 4);
+            $pin = rand(0, 9);
+
             $subject = $row["subject"];
             $description = $row["description"];
+
+            echo "
+            <div class='post paper-$color'>
+                <div class='pin'>
+                    <img src='../assets/images/pin-$pin.png'>
+                    <p>$subject</p>
+                    <p>$description</p>
+                </div> 
+            </div>
+            ";
         }
     }
 
@@ -35,7 +65,20 @@
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $color = rand(0, 4);
+            $pin = rand(0, 9);
+
             $title = $row["title"];
             $description = $row["description"];
+
+            echo "
+            <div class='post paper-$color'>
+                <div class='pin'>
+                    <img src='../assets/images/pin-$pin.png'>
+                    <p>$title</p>
+                    <p>$description</p>
+                </div> 
+            </div>
+            ";
         }
     }

@@ -1,5 +1,4 @@
-//Show different inputs as the user clicks on different options
-const selectOption = document.getElementById("select-option").addEventListener("change", listInputs);
+const clearButton = document.getElementById("clear-button").addEventListener("click", listInputs);
 
 function listInputs() {
     let option = document.getElementById("select-option").value; //get the value from the input
