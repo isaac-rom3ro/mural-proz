@@ -1,4 +1,4 @@
-body{
+body {
     padding: 3%;
     background-color: #201629;
     display: flex;
@@ -10,7 +10,7 @@ body{
     top: 50px;
 }
 
-form{
+form {
     border: #392269;
     background-color: #fff;
     display: flex;
@@ -23,12 +23,13 @@ form{
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.input{
+input {
     margin: 10px;
     padding: 3px;
     width: 80%;
 }
-.button{
+
+button {
     align-items: center;
     margin: 10px;
     margin: 20px;
@@ -44,20 +45,7 @@ form{
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.linha{
-    width: 90%;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    height: 2px;
-    border-bottom: solid 1px rgb(114, 112, 111) ;
-    margin-block: 1.5rem;  
-    margin: 2.3%;
-    padding: 0%; 
-}
-
-.logo,img{
+.logo, img {
     height: 120px;
     width: 120px;
     margin-top: 5px;
