@@ -1,11 +1,22 @@
 <?php
     $signinError = $_GET["signin"];
     $areInputsEmpty = false;
-    
+    $emptyEmail = false;
+    $emptyPassword = false;
+    $undefinedUser = false;
+    $incorrectPassword = false;
+
     if($signinError == "inputs-empty") {
         $areInputsEmpty = true;
+    } else if($signinError == "email-empty") {
+        $emptyEmail = true;
+    } else if($signinError == "password-empty") {
+        $emptyPassword = true;
+    } else if($signinError == "undefined-user") {
+        $undefinedUser = true;
+    } else if($signinError == "incorrect-password") {
+        $incorrectPassword = true;
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +42,14 @@
         <?php
             if($areInputsEmpty) {
                 echo "Those inputs are empty bra!";
+            } else if($emptyEmail) {
+                echo "Email input is empty brother!";
+            } else if($emptyPassword) {
+                echo "Sorry bra but you did not fill the password";
+            } else if($undefinedUser) {
+                echo "Sorry but this email is not in our database";
+            } else if($incorrectPassword) {
+                echo "Brah your password is incorrect, fix it NOW!";
             }
         ?>
 

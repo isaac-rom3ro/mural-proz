@@ -64,21 +64,21 @@
             <?php
                 try {
                     include_once "../assets/includes/show-content.php";
-                    include_once "../assets/database/db-connection.php";
+                    include_once "../assets/connection/db-connection-pdo.php";
                     //get the filter
                     $filter = $_GET["filter"];
 
                     //filter the content based on the value above
                     if(!isset($filter)) {
-                        showAll($db);
+                        showAll($pdo);
                     } else if($filter == "vacancies") {
-                        showVacancies($db);
+                        showVacancies($pdo);
                     } else if($filter == "warnings") {
-                        showWarnings($db);
+                        showWarnings($pdo);
                     } else if($filter == "posts") {
-                        showPosts($db);
+                        showPosts($pdo);
                     } else {
-                        showAll($db);
+                        showAll($pdo);
                     }
                 } catch(Exception $e) {
                     echo $e->getMessage();

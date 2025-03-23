@@ -4,7 +4,7 @@
     $dbname = "";
     $charset = "";
     $user = "";
-    $password = "";
+    $passwordOfDB = "";
 
     try {
         $pdo = new PDO(
@@ -12,12 +12,11 @@
         dbname=$dbname;
         charset=$charset;", 
         "$user", 
-        "$password");
+        "$passwordOfDB");
 
         //Set attributes to make errors to be throw as exceptions 
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        var_dump($pdo);
     } catch(Exception $e) {
         $e->getMessage();
     }

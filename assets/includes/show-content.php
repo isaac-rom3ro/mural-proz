@@ -1,44 +1,44 @@
 <?php
     //Query from all tables
-    function showAll($db) {
-            showVacancies($db);
-            showPosts($db);
-            showWarnings($db);
+    function showAll($pdo) {
+            showVacancies($pdo);
+            showPosts($pdo);
+            showWarnings($pdo);
     }
 
-    function showVacancies($db) {
-        $stmt = $db->prepare("SELECT * FROM vacancies");
+    function showVacancies($pdo) {
+        $stmt = $pdo->prepare("SELECT * FROM jobs");
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $color = rand(0, 4);
             $pin = rand(0, 9);
 
-            $enterpriseName = $row["enterprise_name"];
-            $job = $row["job"];
+            $companyName = $row["company_name"];
+            $occupation = $row["occupation"];
             $description = $row["description"];
             $address = $row["address"];
             $link = $row["link"];
-            $enterprisePhoneNumber= $row["enterprise_phone_number"];
+            $createdAt = $row["created_at"];
 
             echo "
             <div class='post paper-$color'>
                 <div class='pin'>
                     <img src='../assets/images/pin-$pin.png'>
-                    <p>$enterpriseName</p>
-                    <p>$job</p>
+                    <p>$companyName</p>
+                    <p>$occupation</p>
                     <p>$description</p>
                     <p>$address</p>
                     <p>$link</p>
-                    <p>$enterprisePhoneNumber</p>
+                    <p>$$createdAt</p>
                 </div> 
             </div>
             ";
         }
     }
 
-    function showPosts($db) {
-        $stmt = $db->prepare("SELECT * FROM posts");
+    function showPosts($pdo) {
+        $stmt = $pdo->prepare("SELECT * FROM posts");
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -60,8 +60,8 @@
         }
     }
 
-    function showWarnings($db) {
-        $stmt = $db->prepare("SELECT * FROM mural_warnings");
+    function showWarnings($pdo) {
+        $stmt = $pdo->prepare("SELECT * FROM warnings");
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
